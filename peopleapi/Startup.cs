@@ -41,10 +41,6 @@ namespace peopleapi
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
-
-                // endpoints.MapRazorPages();
-                // endpoints.MapDefaultControllerRoute();
-                // endpoints.MapHealthChecks("/health", options => options.OutputJsonReport());
             });
         }
     }
