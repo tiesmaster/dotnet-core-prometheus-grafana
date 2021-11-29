@@ -1,8 +1,10 @@
-version : '3'
- 
+version: '3'
+
 services:
   peopleapi:
-    image: peopleapi
+    build:
+      context: peopleapi
+      dockerfile: Dockerfile
     ports:
       - 8082:8080
     environment:
@@ -12,6 +14,9 @@ services:
       - dotnetcorepromgrafana
 
   locationsapi:
+    build:
+      context: locationsapi
+      dockerfile: Dockerfile
     image: locationsapi
     ports:
       - 8084:8080
@@ -31,7 +36,7 @@ services:
     networks:
       - dotnetcorepromgrafana
 
-  grafana: 
+  grafana:
     image: grafana/grafana
     #command:
     environment:
@@ -44,4 +49,4 @@ services:
 
 ### put all the networks here
 networks:
-  dotnetcorepromgrafana:
+  dotnetcorepromgrafana: null
