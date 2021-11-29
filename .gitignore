@@ -42,3 +42,6 @@ c/\temp\internal-nlog.txt
 
 # generated test files
 test.ckl
+
+.vs
+.suo
