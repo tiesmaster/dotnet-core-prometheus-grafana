@@ -44,6 +44,8 @@ services:
     restart: always
     ports:
       - 3000:3000
+    volumes:
+      - ./grafana/datasource.yaml:/etc/grafana/provisioning/datasources/datasource.yaml
     networks:
       - dotnetcorepromgrafana
 
